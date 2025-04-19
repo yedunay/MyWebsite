@@ -7,83 +7,139 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
-		<div id="wrapper">
-			<header id="header">
-				<h1><a href="index.html">Yunus Emre DUNAY</a></h1>
-				<nav class="links">
-					<ul>
-						<li><a href="#projects">42 Projeleri</a></li>
-						<li><a href="#notes">Ders Notları</a></li>
-						<li><a href="#hardware">Harici Projeler</a></li>
-						<li><a href="#growth">Kendini Gelişim</a></li>
-						<li><a href="https://www.linkedin.com/in/yunusemredunay/">LinkedIn</a></li>
-					</ul>
-				</nav>
-			</header>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-			<div id="main">
-				<section id="projects">
-					<article class="post">
-						<header>
-							<div class="title">
-								<h2><a href="#">42 Projeleri</a></h2>
-								<p>Low-level programlama, C/C++ ve sanal makinelerle ilgili projelerimin detaylı anlatımları.</p>
-							</div>
-						</header>
-						<p><strong>Örnek Proje:</strong> ft_printf</p>
-						<p><code>int ft_printf(const char *format, ...);</code> fonksiyonunun C ile yeniden yazılması, bellek yönetimi ve format analizleri...</p>
-						<p><a href="https://github.com/kullaniciadi/ft_printf">GitHub Koduna Git</a></p>
-					</article>
-				</section>
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Yunus Emre DUNAY</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="#">42 Projeleri</a></li>
+								<li><a href="#">Mikroişlemci Notları</a></li>
+								<li><a href="#">Gömülü Sistem Projeleri</a></li>
+								<li><a href="#">Kendini Gelişim</a></li>
+								<li><a href="https://www.linkedin.com/in/yunusemredunay/">LinkedIn</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Ara</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Ara..." />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menü</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
 
-				<section id="notes">
-					<article class="post">
-						<header>
-							<div class="title">
-								<h2>Ders Notları</h2>
-								<p>Mikroişlemciler dersi haftalık notları</p>
-							</div>
-						</header>
-						<p><a href="notes/week1.html">Hafta 1: Giriş ve Temel Mimariler</a></p>
-						<p><a href="notes/week2.html">Hafta 2: Bellek Haritalama ve GPIO</a></p>
-					</article>
-				</section>
+				<!-- Menu -->
+					<section id="menu">
 
-				<section id="hardware">
-					<article class="post">
-						<header>
-							<div class="title">
-								<h2>Harici Projeler</h2>
-								<p>STM32 ile osiloskop, radar ve sensör tabanlı projeler</p>
-							</div>
-						</header>
-						<p><strong>Proje:</strong> STM32 ile Dijital Osiloskop</p>
-						<p>ADC kullanarak sinyal örnekleme, ekran çıktısı için OLED sürücüsü, DMA ve zamanlayıcı kullanımı.</p>
-						<p><a href="https://github.com/kullaniciadi/oscilloscope">GitHub Koduna Git</a></p>
-					</article>
-				</section>
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Ara..." />
+								</form>
+							</section>
 
-				<section id="growth">
-					<article class="post">
-						<header>
-							<div class="title">
-								<h2>Kendini Gelişim</h2>
-								<p>Dinlediğim podcast'ler, okuduğum kitaplar ve izlediğim gelişim içerikleri</p>
-							</div>
-						</header>
-						<ul>
-							<li>Podcast: <em>Huberman Lab</em> - Beyin ve Performans</li>
-							<li>Kitap: <em>Clean Code</em> - Robert C. Martin</li>
-							<li>Blog Yazısı: <a href="#">Zaman Yönetimi Üzerine Notlar</a></li>
-						</ul>
-					</article>
-				</section>
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="https://github.com/yedun4y">
+											<h3>GitHub Projelerim</h3>
+											<p>42 Türkiye ve mikrodenetleyici tabanlı projelerim</p>
+										</a>
+									</li>
+									<li>
+										<a href="notes/week1.html">
+											<h3>Mikroişlemci Ders Notları</h3>
+											<p>Hafta hafta yüklediğim teorik ve pratik notlar</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Donanım Tabanlı Projeler</h3>
+											<p>STM32 ile osiloskop, radar ve sensör entegre sistemler</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Kendini Gelişim</h3>
+											<p>Podcast, kitap ve bireysel gelişim odaklı paylaşımlar</p>
+										</a>
+									</li>
+								</ul>
+							</section>
+
+						<!-- Actions -->
+							<section>
+								<ul class="actions stacked">
+									<li><a href="mailto:yedun4y@gmail.com" class="button large fit">İletişime Geç</a></li>
+								</ul>
+							</section>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">42 Projeleri Üzerine</a></h2>
+										<p>Düşük seviyeli programlama ve algoritma temelli sistem projelerim</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2024-11-01">Nisan 2025</time>
+										<a href="#" class="author"><span class="name">Yunus Emre DUNAY</span><img src="images/avatar.jpg" alt="" /></a>
+									</div>
+								</header>
+								<a href="https://github.com/yedun4y/42-ft_printf" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+								<p>42 okulundaki projelerimden biri olan <strong>ft_printf</strong>, C standard çıktı fonksiyonunun temel özelliklerini yeniden yazmayı amaçlayan bir çalışmadır. Format ayrışımı, va_arg kullanımı ve buffer yönetimi gibi konulara yoğunlaştım.</p>
+								<footer>
+									<ul class="actions">
+										<li><a href="https://github.com/yedun4y/42-ft_printf" class="button large">GitHub'da Görüntüle</a></li>
+									</ul>
+								</footer>
+							</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+						<section id="intro">
+							<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+							<header>
+								<h2>Yunus Emre DUNAY</h2>
+								<p>Gömülü Sistemler Mühendisi | 42 Türkiye & Sakarya Üniversitesi</p>
+							</header>
+						</section>
+
+						<!-- Footer -->
+						<section id="footer">
+							<ul class="icons">
+								<li><a href="https://github.com/yedun4y" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:yedun4y@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://www.linkedin.com/in/yunusemredunay/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<p class="copyright">
+								&copy; 2025 Yunus Emre DUNAY. Tüm hakları saklıdır.
+							</p>
+						</section>
+					</section>
 			</div>
-		</div>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
 	</body>
 </html>
