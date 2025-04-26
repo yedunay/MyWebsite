@@ -76,41 +76,173 @@
 
 		<!-- Main -->
 		<div id="main">
+			<!-- Genel Tanıtım -->
 			<article class="post">
 				<header>
 					<div class="title">
-						<h2><a>Gömülü Ders 5</a></h2>
-						<p>Processor, Peripheral Yapıları, CMSIS, Boot Bellekler ve Reset Vektörü</p>
-					</div>
-					<div class="meta">
-						<time class="published" datetime="2025-04-24">24 Nisan 2025</time>
+						<h2><a>42 Okulu ve Benim Yolculuğum</a></h2>
+						<p>Türkiye'deki özgür öğrenme modeli ve kişisel deneyimim</p>
 					</div>
 				</header>
-				<a class="image featured"><img src="images/pic05.jpg"
-						alt="Gömülü Sistemler - Donanım Mimari Detayları" /></a>
+				<a class="image featured"><img src="images/pic06.jpg" alt="42 Türkiye" /></a>
 				<p>
-					Bu derste mikrodenetleyici sistemlerinde işlemci çekirdeği (CPU), core ve vendor peripheral
-					ayrımları, internal ve external çevre birimleri gibi temel donanım kavramlarını detaylıca ele
-					alıyoruz.
+					42 Türkiye, tamamen özgür ve proje tabanlı öğrenme modeliyle dünya genelinde tanınan bir yazılım
+					okuludur. Klasik eğitimin aksine, burada hiçbir ders veya öğretmen yoktur; yalnızca projeler,
+					araştırma ve işbirliği vardır. 42'de geçirilen zaman, gerçek dünyada yazılım geliştirici olmak için
+					gereken temel donanımı ve dayanıklılığı sağlar.
 				</p>
 				<p>
-					Ayrıca system memory, flash bellekte alias mekanizması, boot seçenekleri, vector table yapısı ve
-					CMSIS standardı üzerinden yazılım soyutlama mantığını öğreniyoruz. FPU, SP/LR yapıları, Thumb state
-					ayrımı, sabit tablolar (lookup table) ve stack'in başlatılması gibi kritik sistem davranışları da bu
-					dersin kapsamındadır.
+					Benim için 42, sadece bir okul değil, disiplinli çalışma, sabır, problem çözme ve takım çalışması
+					gibi hayat boyu kullanacağım yetenekleri geliştirdiğim bir merkez oldu. Özellikle "Piscine" (havuz)
+					süreci, yazılım dünyasında kalıcı izler bırakacak bir tecrübe oldu.
+				</p>
+			</article>
+
+			<!-- 42Piscine Projesi -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>42Piscine</a></h2>
+						<p>Yoğun öğrenme ve temel yazılım yetkinlikleri süreci</p>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/pic07.jpg" alt="42 Piscine Süreci" /></a>
+				<p>
+					Piscine, 42'ye kabul edilmek için geçirilen bir aylık zorlu öğrenme sürecidir. Günde 10–14 saatlik
+					yoğun kodlama, algoritmalar, C dili, Unix temelleri ve takım projeleri ile doludur. Temel amaç,
+					bireyin öğrenme yeteneğini ve problem çözme becerisini ölçmektir.
+				</p>
+				<p>
+					Süreç boyunca temel C programlama konseptleri, temel algoritmalar, hafıza yönetimi (malloc/free),
+					pointer'lar ve basit veri yapıları gibi konular üzerinde derinlemesine çalıştım. Ayrıca gün sonunda
+					yapılan peer-evaluation ve norminette standartlarına uygun kod yazma kültürü kazandım.
 				</p>
 				<footer>
 					<ul class="actions">
-						<li><a href="https://neat-judo-ade.notion.site/10-03-5-Ders-1dc93f1bab1d80afb5d9e68c08f8d474?pvs=4"
-								class="button large" target="_blank">Devamını oku</a></li>
+						<li><a href="https://github.com/yedunay/42Piscine" class="button large" target="_blank">GitHub'a
+								Git</a></li>
 					</ul>
 				</footer>
+			</article>
+
+			<!-- BSQ42 Projesi -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>BSQ42</a></h2>
+						<p>En büyük kareyi bulma algoritması (Dynamic Programming)</p>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/pic08.jpg" alt="BSQ42 Projesi" /></a>
+				<p>
+					BSQ (Biggest Square), bir harita üzerinde en büyük boş kareyi bulmayı amaçlayan bir algoritma
+					projesidir. Verilen bir haritada boşluklar ve engeller işaretlenir, ve dinamik programlama
+					yaklaşımıyla en büyük kare alan tespit edilir.
+				</p>
+				<p>
+					Bu projede dosya okuma, veri işleme, algoritmik optimizasyon ve dinamik hafıza kullanımı konularında
+					tecrübe kazandım. Hataları yönetmek ve büyük veri kümeleriyle verimli çalışmak üzerine birçok
+					optimizasyon yaptım.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/BSQ42" class="button large" target="_blank">GitHub'a
+								Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
+			<!-- Libft Projesi -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>libft</a></h2>
+						<p>Temel C kütüphanesini sıfırdan yazmak</p>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/pic09.jpg" alt="libft Projesi" /></a>
+				<p>
+					Libft, standart C kütüphanesinin önemli fonksiyonlarının yeniden yazılmasını kapsayan bir temel
+					projedir. Bu proje sayesinde `memset`, `strcpy`, `atoi`, `isdigit`, `strlen` gibi birçok temel
+					fonksiyonu sıfırdan ve memory-safe şekilde implement ettim.
+				</p>
+				<p>
+					Ayrıca bonus kısmında linked list veri yapıları, eklemeler, silmeler, iterasyonlar ve map
+					fonksiyonları geliştirdim. Kodun modülerliği ve güvenilir hafıza yönetimi açısından kendimi ileri
+					taşıdım.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/libft" class="button large" target="_blank">GitHub'a
+								Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
+			<!-- ft_printf Projesi -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>ft_printf</a></h2>
+						<p>C dilinde printf fonksiyonunun yeniden geliştirilmesi</p>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/pic10.jpg" alt="ft_printf Projesi" /></a>
+				<p>
+					ft_printf projesi, C standardındaki `printf` fonksiyonunun özelliklerini taklit eden, kendi
+					formatlayıcı fonksiyonumu geliştirdiğim ileri seviye bir projedir. `%d`, `%s`, `%c`, `%x`, `%p`,
+					`%u` gibi format specifier'ları başarıyla işleyen bir yapı geliştirdim.
+				</p>
+				<p>
+					Bu proje ile string parsing, variadic functions (`va_list`, `va_start`, `va_end`) kullanımı, hafıza
+					yönetimi ve hata kontrolü konularında önemli deneyimler edindim.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/ft_printf" class="button large" target="_blank">GitHub'a
+								Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
+			<!-- get_next_line Projesi -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>get_next_line</a></h2>
+						<p>Dosyalardan satır satır okuma fonksiyonu geliştirme</p>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/pic11.jpg" alt="get_next_line Projesi" /></a>
+				<p>
+					get_next_line projesi, bir dosyadan satır satır veri okumak için efektif bir fonksiyon geliştirme
+					hedefi taşır. Her çağrıda bir sonraki satırı döndürür ve dosya sonuna ulaşıldığında NULL döner.
+				</p>
+				<p>
+					Bu proje ile buffer yönetimi, static değişken kullanımı, hafıza sızıntılarını önleme ve sistem
+					çağrıları (`read`) gibi alçak seviyeli işlemleri deneyimledim. Hızlı ve güvenilir veri yönetimi için
+					önemli teknikler öğrendim.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/get_next_line" class="button large"
+								target="_blank">GitHub'a Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
+			<footer>
+				<ul class="actions">
+					<li><a href="https://neat-judo-ade.notion.site/10-03-5-Ders-1dc93f1bab1d80afb5d9e68c08f8d474?pvs=4"
+							class="button large" target="_blank">Devamını oku</a></li>
+				</ul>
+			</footer>
 			</article>
 
 			<!-- Pagination -->
 			<ul class="actions pagination">
 				<li><a href="" class="disabled button large previous">Önceki Sayfa</a></li>
-				<li><a href="#" class="button large next">Sonraki Sayfa</a></li>
+				<li><a href="forty_twopage2.html" class="button large next">Sonraki Sayfa</a></li>
 			</ul>
 
 		</div>

@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Yunus Emre DUNAY</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">Yunus Emre DUNAY</a></h1>
+			<nav class="links">
+				<ul>
+					<li><a href="embedded.html">Gömülü Dersleri</a></li>
+					<li><a href="forty_two.html">42</a></li>
+					<li><a href="mcu.html">Mikroişlemci Projeleri</a></li>
+					<li><a href="mind.html">Zihinsel Yatırım</a></li>
+					<li><a href="about.html">Hakkımda</a></li>
+				</ul>
+			</nav>
+			<nav class="main">
+				<ul>
+					<li class="menu">
+						<a class="fa-bars" href="#menu">Menu</a>
+					</li>
+				</ul>
+			</nav>
+
+		</header>
+
+		<!-- Menu -->
+		<section id="menu">
+			<!-- Links -->
+			<section>
+				<ul class="links">
+					<li>
+						<a href="embedded.html">
+							<h3>Gömülü Dersleri</h3>
+							<p>Hafta hafta yüklediğim teorik ve pratik notlar</p>
+						</a>
+					</li>
+					<li>
+						<a href="forty_two.html">
+							<h3>42</h3>
+							<p>[C / C++ / Sanal Makineler / Soketler / Docker ve daha fazlası...]</p>
+						</a>
+					</li>
+					<li>
+						<a href="mcu.html">
+							<h3>Mikroişlemci Projeleri</h3>
+							<p>STM32 ve Tiva Stellaris ile tasarladığım projeler</p>
+						</a>
+					</li>
+					<li>
+						<a href="mind.html">
+							<h3>Zihinsel Yatırım</h3>
+							<p>Podcast, kitap ve bireysel gelişim odaklı bilimsel paylaşımlar</p>
+						</a>
+					</li>
+					<li>
+						<a href="about.html">
+							<h3>Hakkımda</h3>
+							<p>Benim hakkımda daha fazla bilgi</p>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</section>
+
+		<!-- Main -->
+		<div id="main">
+			<!-- minitalk Projesi -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>minitalk</a></h2>
+						<p>UNIX sinyalleriyle iki süreç arasında iletişim</p>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/pic12.jpg" alt="minitalk Projesi" /></a>
+				<p>
+					minitalk projesi, iki farklı sürecin (process) sadece UNIX sinyalleri kullanarak haberleşmesini
+					sağlar. Bir sunucu süreci (`server`) ve bir istemci süreci (`client`) oluşturularak, karakter
+					tabanlı veri iletimi gerçekleştirilir.
+				</p>
+				<p>
+					Bu proje sayesinde sinyallerle veri iletişimi, sinyal handler yönetimi (`signal()`, `sigaction()`),
+					bit manipülasyonu ve zamanlamanın kritik olduğu düşük seviyeli iletişim teknikleri konusunda pratik
+					yaptım.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/minitalk" class="button large" target="_blank">GitHub'a
+								Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
+			<!-- so_long Projesi -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>so_long</a></h2>
+						<p>Basit bir 2D oyun motoru geliştirme</p>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/pic13.jpg" alt="so_long Projesi" /></a>
+				<p>
+					so_long projesinde, küçük bir labirent oyun motoru geliştirdim. Harita okuma, oyuncu hareketi,
+					düşman yerleşimi ve kazanma/bitirme koşulları gibi temel oyun mekaniklerini C dilinde kodladım.
+				</p>
+				<p>
+					MLX (MiniLibX) kütüphanesi kullanarak grafiksel arayüz oluşturmayı, olay yönetimi (event handling)
+					ve key-mapping gibi GUI kavramlarını öğrendim. Bellek yönetimi ve gerçek zamanlı ekran
+					güncellemeleri üzerine çalıştım.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/so_long" class="button large" target="_blank">GitHub'a
+								Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
+			<!-- push_swap Projesi -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>push_swap</a></h2>
+						<p>Veri sıralama algoritmaları ve optimizasyon</p>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/pic14.jpg" alt="push_swap Projesi" /></a>
+				<p>
+					push_swap, sınırlı sayıda izin verilen işlemlerle bir sayı listesini en az adımda sıralamayı
+					amaçlayan bir projedir. Stack veri yapısı üzerinde `push`, `swap`, `rotate`, `reverse rotate` gibi
+					işlemlerle minimum hamlede çözüm üretmek hedeflenmiştir.
+				</p>
+				<p>
+					Bu projeyle birlikte algoritmik düşünme, sorting optimizasyonları, big-O analizleri ve farklı veri
+					yapıları kullanımı (linked list vs array) konusunda derinlemesine bilgi kazandım.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/pushswap" class="button large" target="_blank">GitHub'a
+								Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
+			<!-- philosophers Projesi -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>philosophers</a></h2>
+						<p>Çoklu iş parçacığı yönetimi ve senkronizasyon</p>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/pic15.jpg" alt="philosophers Projesi" /></a>
+				<p>
+					philosophers projesi, klasik "Filozoflar Problemi"ni çözerek çoklu iş parçacığı (thread) yönetimi,
+					mutex kullanımı ve deadlock önleme tekniklerini öğrenmeyi amaçlar. Her filozof bir iş parçacığıdır
+					ve çatal paylaşımı sırasında senkronizasyon gerektirir.
+				</p>
+				<p>
+					Bu projeyle pthread kullanımı, mutex kilitleme ve açma mekanizmaları, race condition önleme,
+					starvation ve deadlock yönetimi gibi çok çekirdekli sistemlerde kritik olan konuları pratiğe döktüm.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/philo" class="button large"
+								target="_blank">GitHub'a Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
+			<!-- minishell Projesi -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>minishell</a></h2>
+						<p>Basit bir komut satırı kabuğu geliştirme</p>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/pic16.jpg" alt="minishell Projesi" /></a>
+				<p>
+					minishell projesi, temel komut satırı işlemlerini gerçekleştiren bir kabuk (shell) programı
+					geliştirme sürecini kapsar. `cd`, `echo`, `pwd`, `export`, `unset`, `env`, `exit` gibi dahili
+					komutların yanı sıra, dış programların çalıştırılması da desteklenir.
+				</p>
+				<p>
+					Bu proje sayesinde tokenizer, parser, abstract syntax tree (AST), process fork/exec yönetimi, dosya
+					yönlendirme (redirection), pipe yönetimi ve ortam değişkenleri (env) kontrolü gibi ileri düzey UNIX
+					programlama konularında derinleşme imkânı buldum.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/minishell" class="button large" target="_blank">GitHub'a
+								Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
+
+			<!-- Pagination -->
+			<ul class="actions pagination">
+				<li><a href="forty_two.html" class="button large previous">Önceki Sayfa</a></li>
+				<li><a href="forty_twopage3.html" class="button large next">Sonraki Sayfa</a></li>
+			</ul>
+
+		</div>
+
+		<!-- Sidebar -->
+		<section id="sidebar">
+
+			<!-- Intro -->
+			<section id="intro">
+				<a href="#" class="logo"><img src="images/YED.jpeg" alt="" /></a>
+				<header>
+					<h2>Yunus Emre DUNAY</h2>
+				</header>
+			</section>
+
+			<!-- About -->
+			<section class="blurb">
+				<h2>Hakkımda</h2>
+				<p>22 yaşındayım. Gömülü sistemler, mikrodenetleyiciler ve düşük seviyeli yazılım geliştirme alanında
+					çalışıyorum. Sürekli öğrenen, detaycı ve üretmeye odaklı bir mühendis adayıyım.</p>
+				<ul class="actions">
+					<li><a href="about.html" class="button">Daha Fazla</a></li>
+				</ul>
+			</section>
+
+			<!-- Footer -->
+			<section id="footer">
+				<ul class="icons" style="text-align: center;">
+					<li><a href="https://www.linkedin.com/in/yunusemredunay/" class="icon brands fa-linkedin"
+							target="_blank" style="font-size: 24px;"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.instagram.com/yunusemredunay/" class="icon brands fa-instagram"
+							target="_blank" style="font-size: 24px;"><span class="label">Instagram</span></a></li>
+					<li><a href="mailto:yedun4y@gmail.com" class="icon solid fa-envelope" style="font-size: 24px;"><span
+								class="label">Email</span></a></li>
+				</ul>
+				<p class="copyright" style="text-align: center;">&copy; designed by <a href="about.html">@YED .</a></p>
+			</section>
+
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

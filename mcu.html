@@ -76,43 +76,105 @@
 
 		<!-- Main -->
 		<div id="main">
+			<!-- Tiva C Weekly Learning Repository Post -->
 			<article class="post">
 				<header>
 					<div class="title">
-						<h2><a>Gömülü Ders 5</a></h2>
-						<p>Processor, Peripheral Yapıları, CMSIS, Boot Bellekler ve Reset Vektörü</p>
-					</div>
-					<div class="meta">
-						<time class="published" datetime="2025-04-24">24 Nisan 2025</time>
+						<h2><a>Tiva C Weekly Learning</a></h2>
+						<p>Mikroişlemcilere Derinlemesine ve Uygulamalı Giriş</p>
 					</div>
 				</header>
-				<a class="image featured"><img src="images/pic05.jpg"
-						alt="Gömülü Sistemler - Donanım Mimari Detayları" /></a>
+				<a class="image featured"><img src="images/pic22.jpg" alt="Tiva C Weekly Learning" /></a>
 				<p>
-					Bu derste mikrodenetleyici sistemlerinde işlemci çekirdeği (CPU), core ve vendor peripheral
-					ayrımları, internal ve external çevre birimleri gibi temel donanım kavramlarını detaylıca ele
-					alıyoruz.
+					Bu proje, mikroişlemci mimarilerini ve doğrudan donanım programlamayı adım adım öğrenmek isteyenler
+					için hazırlanmış kapsamlı bir eğitim serisidir. Tiva C serisi mikrodenetleyiciler temel alınarak,
+					haftalık sistemli ilerlemelerle konular işlenmiş, her hafta uygulamalı örneklerle pekiştirilmiştir.
+					Başlangıçtan ileri seviyeye kadar sağlam bir temel oluşturmak için ideal bir yol haritası
+					sunulmuştur.
 				</p>
 				<p>
-					Ayrıca system memory, flash bellekte alias mekanizması, boot seçenekleri, vector table yapısı ve
-					CMSIS standardı üzerinden yazılım soyutlama mantığını öğreniyoruz. FPU, SP/LR yapıları, Thumb state
-					ayrımı, sabit tablolar (lookup table) ve stack'in başlatılması gibi kritik sistem davranışları da bu
-					dersin kapsamındadır.
+					Tüm detaylı haftalık içeriklere ulaşmak için aşağıdaki "Devamını Oku" butonuna tıklayın.
 				</p>
 				<footer>
 					<ul class="actions">
-						<li><a href="https://neat-judo-ade.notion.site/10-03-5-Ders-1dc93f1bab1d80afb5d9e68c08f8d474?pvs=4"
-								class="button large" target="_blank">Devamını oku</a></li>
+						<li><a href="#tiva-c-details" class="button large">Devamını Oku</a></li>
 					</ul>
 				</footer>
 			</article>
 
-			<!-- Pagination -->
+			<!-- Gizli Detaylı İçerik -->
+			<article id="tiva-c-details" class="post" style="display: none;">
+				<header>
+					<div class="title">
+						<h2>Tiva C Weekly Learning - Detaylı Haftalık İçerik</h2>
+					</div>
+				</header>
+				<p><strong>Hafta 1:</strong> Mikroişlemcilere Giriş<br>
+					Mikroişlemcilerin doğuşu, tarihçesi ve günümüzdeki uygulama alanları detaylandırıldı. Tiva C serisi
+					MCU mimarisi tanıtıldı. Code Composer Studio kurulumu, ilk "Blinky" projesinin yapılması ve debugger
+					kullanımı öğrenildi.</p>
+				<p><strong>Hafta 2:</strong> GPIO Yapıları<br>
+					GPIO pin yapılandırmaları, clock enable işlemleri, register seviyesinde input/output modlarının
+					kontrolü yapıldı. LED yakma/söndürme ve basit buton okuma devreleri gerçekleştirildi.</p>
+				<p><strong>Hafta 3:</strong> Buton Kullanımı ve Debounce<br>
+					Butonlardan gelen mekanik bouncing etkisinin teorik açıklaması yapıldı. Yazılımsal debounce
+					algoritmaları geliştirildi. Butona basıldığında LED yak/söndür uygulamaları kodlandı.</p>
+				<p><strong>Hafta 4:</strong> Interrupt Sistemi<br>
+					Polling ile interrupt arasındaki farklar anlatıldı. NVIC ayarları ve GPIO interrupt'larının kurulumu
+					gerçekleştirildi. Butona basıldığında interrupt tetikleyen sistemler geliştirildi.</p>
+				<p><strong>Hafta 6:</strong> LCD Uygulamaları<br>
+					16x2 karakter LCD modülünün low-level register ayarları ile sürülmesi sağlandı. 4-bit ve 8-bit
+					iletişim modları kullanıldı. Buton matrisi üzerinden alınan verilerin LCD'ye yazdırılması
+					projelendirildi.</p>
+				<p><strong>Hafta 7:</strong> Timer Kullanımı<br>
+					Timer modüllerinin normal zamanlama ve PWM modlarında kullanımı incelendi. Timer interrupt ayarları
+					yapılarak belirli periyotlarda işlem tetiklemeleri sağlandı.</p>
+				<p><strong>Hafta 8:</strong> UART Haberleşmesi<br>
+					Asenkron seri haberleşmenin temelleri işlendi. UART konfigürasyonu yapıldı, terminal programı ile
+					bilgisayardan veri gönderimi/alımı sağlandı. UART ile LED kontrol projeleri geliştirildi.</p>
+				<p><strong>Hafta 9:</strong> ADC Modülü<br>
+					Analog sinyallerin dijital çevrimi teorik ve pratik açıdan anlatıldı. 12-bit ADC konfigüre edilerek
+					potansiyometre gibi analog sensörlerden veri okuma uygulamaları yapıldı.</p>
+				<p><strong>Hafta 10:</strong> API'siz ADC Kullanımı<br>
+					ADC modülü doğrudan register'lar üzerinden kontrol edildi. Sequencer yapısı detaylandırıldı.
+					Sensörden veri alınıp LCD'ye gösteren bir tam sistem uygulaması geliştirildi.</p>
+				<p><strong>Hafta 11:</strong> Hibernation ve Low Power Modları<br>
+					Güç yönetimi konuları işlendi. Hibernation modülü aktif edilerek düşük güç tüketimli uygulamalar
+					tasarlandı. RTC ile zamanlayıcı kurularak sistemin uyandırılması gerçekleştirildi.</p>
+				<p><strong>Hafta 12:</strong> Floating Point Unit (FPU) Kullanımı<br>
+					Donanımsal kayan nokta birimi (FPU) özellikleri ve konfigürasyonu detaylıca işlendi. Sinüs, kosinüs
+					gibi matematiksel işlemlerin hızlı hesaplanması sağlandı ve UART üzerinden çıktıları gösterildi.</p>
+				<p><strong>Hafta 13:</strong> PWM Sinyalleri ve ADC Kontrollü PWM<br>
+					PWM üretimi için Timer modülleri kullanıldı. Duty cycle değişimi ADC'den alınan sensör verisine göre
+					ayarlandı. LED parlaklık kontrolü gibi gerçek dünya uygulamaları geliştirildi.</p>
+			</article>
+
+			<script>
+				// "Devamını Oku" tıklandığında detaylı içerik gösterilsin
+				document.addEventListener("DOMContentLoaded", function () {
+					document.querySelectorAll('a[href="#tiva-c-details"]').forEach(function (link) {
+						link.addEventListener("click", function (event) {
+							event.preventDefault();
+							var detay = document.getElementById("tiva-c-details");
+							if (detay.style.display === "none") {
+								detay.style.display = "block";
+								link.textContent = "Kapat";
+							} else {
+								detay.style.display = "none";
+								link.textContent = "Devamını Oku";
+							}
+						});
+					});
+				});
+			</script>
+
+
+			<!-- Pagination
 			<ul class="actions pagination">
 				<li><a href="" class="disabled button large previous">Önceki Sayfa</a></li>
 				<li><a href="#" class="button large next">Sonraki Sayfa</a></li>
-			</ul>
-
+			</ul> 
+			-->
 		</div>
 
 		<!-- Sidebar -->

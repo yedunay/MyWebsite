@@ -76,37 +76,80 @@
 
 		<!-- Main -->
 		<div id="main">
-			<!-- Post -->
+			<!-- Mind Investment Post -->
 			<article class="post">
 				<header>
 					<div class="title">
-						<h2><a>Gömülü Ders 5</a></h2>
-						<p>Processor, Peripheral Yapıları, CMSIS, Boot Bellekler ve Reset Vektörü</p>
-					</div>
-					<div class="meta">
-						<time class="published" datetime="2025-04-24">24 Nisan 2025</time>
+						<h2><a>Zihinsel Yatırım</a></h2>
+						<p>Portföy Hazırlama Serüvenim ve Yapay Zeka ile Yeni Nesil Üretkenlik</p>
 					</div>
 				</header>
-				<a class="image featured"><img src="images/pic05.jpg"
-						alt="Gömülü Sistemler - Donanım Mimari Detayları" /></a>
+				<a class="image featured"><img src="images/pic23.jpg" alt="Mind Investment" /></a>
 				<p>
-					Bu derste mikrodenetleyici sistemlerinde işlemci çekirdeği (CPU), core ve vendor peripheral
-					ayrımları, internal ve external çevre birimleri gibi temel donanım kavramlarını detaylıca ele
-					alıyoruz.
-				</p>
-				<p>
-					Ayrıca system memory, flash bellekte alias mekanizması, boot seçenekleri, vector table yapısı ve
-					CMSIS standardı üzerinden yazılım soyutlama mantığını öğreniyoruz. FPU, SP/LR yapıları, Thumb state
-					ayrımı, sabit tablolar (lookup table) ve stack'in başlatılması gibi kritik sistem davranışları da bu
-					dersin kapsamındadır.
+					Bu siteyi ve portföyümü oluşturma sürecim, sadece projelerimi listelemekten çok daha fazlasıydı. Bir
+					fikir, bir zihinsel yatırım, bir kişisel manifestoydu. Burada yapay zekayı sadece bir araç değil,
+					aktif bir yol arkadaşı olarak kullanarak her adımda daha verimli ve üretken olmaya çalıştım. Neden
+					bir portföy hazırladım, neden belgeleri böyle detaylandırdım ve neden yapay zekayı merkezime aldım?
+					Devamını oku'ya tıklayarak bu sürecin felsefi ve teknik arka planını keşfedin.
 				</p>
 				<footer>
 					<ul class="actions">
-						<li><a href="https://neat-judo-ade.notion.site/10-03-5-Ders-1dc93f1bab1d80afb5d9e68c08f8d474?pvs=4"
-								class="button large" target="_blank">Devamını oku</a></li>
+						<li><a href="#mind-details" class="button large">Devamını Oku</a></li>
 					</ul>
 				</footer>
 			</article>
+
+			<article id="mind-details" class="post" style="display: none;">
+				<header>
+					<div class="title">
+						<h2>Zihinsel Yatırım - Felsefi ve Teknik Arkaplan</h2>
+					</div>
+				</header>
+				<p>
+					Modern çağda bilgiye ulaşmak hiç bu kadar kolay olmamıştı. Ancak bilgiye erişmek ile bilgiyi işleyip
+					üretime dönüştürmek arasındaki farkı iyi anlayanlar bu çağda iz bırakabilecek. Ben de bu bilinçle,
+					elimdeki tüm potansiyeli kullanarak bir portföy oluşturmak istedim. Her proje sadece bir teknik
+					uygulama değil, aynı zamanda bir öğrenme sürecinin somut kanıtı.
+				</p>
+				<p>
+					Portföyümü hazırlarken neden yapay zekayı yoğun bir şekilde kullandım? Çünkü yapay zeka, üretkenliği
+					artırmak, düşünceleri daha hızlı organize etmek ve daha büyük resme odaklanmak için eşsiz bir araç.
+					Buradaki her yapının, her yazının, her sayfanın temelinde yapay zekadan alınan destek bulunuyor.
+					İçeriklerin taslağından, detayların organize edilmesine, kodların doğrulamasına kadar birçok aşamada
+					yapay zekayı bir 'asistan' gibi kullandım.
+				</p>
+				<p>
+					Bir portföy hazırlamak, sadece projeleri sergilemek değil; bir düşünme, öğrenme ve üretme
+					disiplinini dışa vurmak demektir. Bilginin, becerinin ve vizyonun somut bir yansımasıdır. Kendini
+					geliştirmek isteyen herkes için şiddetle tavsiye ederim: Ne yaparsanız yapın, görünür kılın. Hem
+					kendi gelişiminiz hem de başkalarına ilham olmak için.
+				</p>
+				<p>
+					Bu siteyi oluştururken öğrendiğim şeylerden biri de şu oldu: Yapay zeka yalnızca soruları cevaplamak
+					için değil, düşünceleri şekillendirmek, yeni fikirler üretmek ve sürekli olarak üretkenliği artırmak
+					için kullanılmalı. Gelecek nesil profesyonellik anlayışı bunu gerektiriyor.
+				</p>
+			</article>
+
+			<script>
+				// "Devamını Oku" tıklandığında detaylı içerik gösterilsin
+				document.addEventListener("DOMContentLoaded", function () {
+					document.querySelectorAll('a[href="#tiva-c-details"], a[href="#mind-details"]').forEach(function (link) {
+						link.addEventListener("click", function (event) {
+							event.preventDefault();
+							var detay = document.getElementById(link.getAttribute('href').substring(1));
+							if (detay.style.display === "none") {
+								detay.style.display = "block";
+								link.textContent = "Kapat";
+							} else {
+								detay.style.display = "none";
+								link.textContent = "Devamını Oku";
+							}
+						});
+					});
+				});
+			</script>
+
 
 			<!-- Pagination -->
 			<ul class="actions pagination">
