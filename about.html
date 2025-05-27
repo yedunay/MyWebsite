@@ -129,16 +129,53 @@
 				</style>
 
 				<section id="cv" class="post" style="margin-top: 1em;">
-					<header
-						style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1em; padding: 1em 2em 0.5em 2em;">
-						<div style="flex: 1 1 300px; min-width: 200px;">
-							<h2 style="margin: 0; font-size: 1.75em; letter-spacing: 0.5px;">Yunus Emre DUNAY</h2>
+					<style>
+						.cv-header {
+							display: flex;
+							flex-wrap: wrap;
+							justify-content: space-between;
+							align-items: center;
+							gap: 1em;
+							padding: 1em 2em 0.5em 2em;
+						}
+
+						.cv-header h2 {
+							margin: 0;
+							font-size: clamp(1.2em, 4vw, 1.75em);
+							letter-spacing: 0.5px;
+						}
+
+						.cv-header p {
+							margin: 0;
+							font-weight: 500;
+							color: #666;
+							font-size: clamp(1em, 3.5vw, 1.1em);
+							text-align: right;
+						}
+
+						@media (max-width: 600px) {
+							.cv-header {
+								flex-direction: column;
+								align-items: flex-start;
+								text-align: left;
+							}
+
+							.cv-header p {
+								text-align: left;
+								width: 100%;
+							}
+						}
+					</style>
+
+					<header class="cv-header">
+						<div>
+							<h2>Yunus Emre DUNAY</h2>
 						</div>
-						<div style="flex: 1 1 300px; min-width: 200px; text-align: right;">
-							<p style="margin: 0; font-weight: 500; color: #666; font-size: 1.1em;">Gömülü Sistem
-								Mühendisi</p>
+						<div>
+							<p>Gömülü Sistem Mühendisi</p>
 						</div>
 					</header>
+
 
 					<div class="info-cards"
 						style="display: flex; flex-wrap: wrap; gap: 1em; margin: 1em 2em 1.5em 2em;">
