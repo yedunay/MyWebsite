@@ -109,66 +109,56 @@
 						<h2>Gömülü Sistemlere Giriş: ARM Mimarisi ve Bu Notların Kaynağı</h2>
 					</header>
 
-
 					<p>
-						Bu not serisi, gömülü sistemler üzerine kendi öğrenme sürecimi belgelemek ve sistemli bir
-						şekilde ilerlemek amacıyla oluşturulmuştur. Temel odağım, ARM mikrodenetleyici mimarisi üzerine
-						inşa edilen STM32 mikrodenetleyici ailesidir. Bu mimariyi seçmemin en önemli nedeni, günümüzde
-						hem akademik hem de endüstriyel dünyada en yaygın kullanılan gömülü platformlardan biri
-						olmasıdır.
+						Hazırlanan bu not serisi, gömülü sistemler alanında bireysel öğrenme sürecini yapılandırmak ve
+						dokümante etmek amacıyla oluşturulmuştur. Odak noktası, ARM mimarisi temelinde geliştirilen
+						STM32 mikrodenetleyici ailesidir. Bu mimarinin seçilme nedeni, hem akademik hem de endüstriyel
+						alanda yaygınlığı ve güçlü ekosistemidir.
 					</p>
 
 					<p>
-						Öğrenme sürecimde C Sistem ve Programcıları Derneği'nin (CSD) hazırladığı <strong>ARM
-							Mikrodenetleyici Kursu</strong> benim için temel referans kaynağıdır. Eğitmen <strong>Gürbüz
-							Aslan Hoca</strong>'nın detaylı anlatımları ve sistematik yaklaşımı, mikrodenetleyici
-						mimarisine hem teorik hem de uygulamalı düzeyde hâkim olmamı sağladı. Bu notlar, söz konusu kurs
-						kapsamında ele alınan konuların benim anladığım ve uyguladığım şekilde özeti ve genişletilmiş
-						hali olarak düşünülebilir.
+						C Sistem ve Programcıları Derneği tarafından sunulan <strong>ARM Mikrodenetleyici
+							Kursu</strong>, bu çalışmanın temel referans kaynağını oluşturmaktadır. Eğitmen
+						<strong>Gürbüz Aslan</strong> tarafından sunulan sistematik anlatım, teorik altyapının yanı sıra
+						uygulamalı bilgilerin de kazanılmasına olanak tanımıştır.
 					</p>
 
 					<p>
-						ARM mimarisi, özellikle Cortex-M serisiyle birlikte gömülü sistem uygulamalarında yüksek
-						performans, düşük güç tüketimi ve zengin çevresel donanım desteği sunmaktadır.
-						STMicroelectronics tarafından üretilen STM32 serisi, bu mimarinin sağladığı avantajları geniş
-						bir ürün yelpazesiyle kullanıcılara sunar. Bu seride hem yeni başlayanlar için uygun basit
-						modeller, hem de profesyonel düzeyde işlem gücü sunan gelişmiş varyantlar bulunmaktadır.
+						Bu içerikler, ARM Cortex-M çekirdeği ve çevresel donanımlar üzerine yapılan uygulamalı
+						çalışmalarla zenginleştirilmiş; STM32 serisi ile entegre kullanıma yönelik yapılandırılmıştır.
+						Hem giriş seviyesindeki kullanıcılar hem de ileri düzey geliştiriciler için kademeli bir yol
+						haritası sunulmaktadır.
 					</p>
 
 					<p>
-						Bu notlar, sıfırdan başlayarak hem teorik kavramları hem de pratik uygulamaları kapsamayı
-						hedeflemektedir. Notlar içerisinde aşağıdaki ana başlıklar zamanla detaylandırılacaktır:
+						Ders içerikleri sırasıyla şunlardır:
 					</p>
 					<ul>
-						<li>ARM mimarisi temelleri (Cortex-M çekirdek yapısı, pipeline mantığı, register yapısı)</li>
-						<li>STM32 mikrodenetleyiciler üzerinde temel çevresel birimler (GPIO, Timer, ADC, USART, DMA...)
-						</li>
-						<li>C dili ile donanım kontrolü</li>
-						<li>STM32CubeIDE ve STM32CubeMX araçlarıyla proje geliştirme</li>
-						<li>Yazılım katmanları: HAL, LL ve doğrudan register erişimi</li>
-						<li>Gerçek zamanlı uygulamalara hazırlık (interrupt yönetimi, polling vs event-driven yapı)</li>
+						<li>ARM mimarisine giriş ve çekirdek yapısı</li>
+						<li>Çevresel birimlerin kullanımı (GPIO, Timer, ADC, USART, DMA)</li>
+						<li>C dili ile donanım seviyesinde kod geliştirme</li>
+						<li>IDE ve proje geliştirme araçlarının kullanımı</li>
+						<li>HAL, LL ve doğrudan register erişimi üzerine yazılım katmanları</li>
+						<li>Gerçek zamanlı sistemler ve kesme yönetimi</li>
 					</ul>
 
 					<p>
-						Bu belgede yer alan tüm içerikler, kendi uygulamalarımla test edilmiş ve her bir not, pratiğe
-						dayalı olarak hazırlanmıştır. Amacım yalnızca teori anlatmak değil; gerçek dünyada çalışan
-						sistemlerin temel yapıtaşlarını somut örneklerle ortaya koymaktır.
+						Tüm ders içerikleri, bireysel olarak test edilmiş ve uygulamaya dayalı olarak sunulmuştur.
 					</p>
 
 					<p>
-						Bundan sonraki her not “Ders 1”, “Ders 2” şeklinde sıralı olarak ilerleyecek ve her biri belirli
-						bir alt başlığa odaklanacaktır. Bu giriş notu, tüm serinin çerçevesini çizen bir başlangıçtır.
+						Takip eden notlar “Ders 1”, “Ders 2” biçiminde sıralı bir sistematikle sunulmaktadır.
 					</p>
 
 					<footer>
-						<p><em>Bu notlar tamamen kişisel öğrenme sürecimin bir parçasıdır. Her sayfa, anlamaya
-								çalıştığım bir kavramın izlerini taşır. Umarım bir başkasına da ışık tutar.</em></p>
+						<p><em>Notlar, bireysel öğrenme sürecinin çıktısı olup, benzer konularda çalışanlar için yol
+								gösterici olmayı hedeflemektedir.</em></p>
 					</footer>
 				</section>
 				<footer>
 					<ul class="actions">
-						<li><a href="https://github.com/yedunay/ARM" class="button large"
-								target="_blank">Github'a Git</a></li>
+						<li><a href="https://github.com/yedunay/ARM" class="button large" target="_blank">Github'a
+								Git</a></li>
 					</ul>
 				</footer>
 			</article>
@@ -186,14 +176,10 @@
 				</header>
 				<a class="image featured"><img src="images/ders1.png" alt="" /></a>
 				<p>
-					Gömülü Sistemler Dersi’nin ilk haftasında, mikrodenetleyici dünyasına adım atıyoruz. Ders boyunca
-					mikrodenetleyici ile mikroişlemci arasındaki farkları keşfederek başlıyor, ardından ARM mimarisinin
-					tarihsel gelişimini, kullanım alanlarını ve sektördeki önemini ele alıyoruz. Harvard ve Von Neumann
-					mimarileri arasındaki temel farklara odaklanarak sistem mimarisi üzerine sağlam bir bakış açısı
-					kazanıyoruz.
-
-					Bu ders, donanım ve yazılım ilişkisini temelden kavramak ve ARM tabanlı gömülü sistemlerin yapı
-					taşlarını anlamak isteyenler için güçlü bir başlangıç noktası sunuyor.
+					İlk derste, mikrodenetleyici ile mikroişlemci arasındaki temel farklar ele alınmakta; ARM
+					mimarisinin tarihsel gelişimi, yaygın kullanım alanları ve sektörel önemi açıklanmaktadır. Harvard
+					ve Von Neumann mimarileri karşılaştırılarak, sistem mimarisi bağlamında temel bir anlayış
+					kazandırılmaktadır.
 				</p>
 				<footer>
 					<ul class="actions">
@@ -214,14 +200,11 @@
 					</div>
 				</header>
 				<a class="image featured"><img src="images/ders2.png" alt="" /></a>
-				<p>Bu derste, işlemci dünyasının temellerine derinlemesine bir giriş yapıyoruz. RISC ve CISC
-					mimarilerinin karşılaştırmasıyla başlayarak ARM tabanlı sistemlerin neden tercih edildiğini
-					inceliyoruz. MIPS ve VLSI gibi kavramları teknik düzeyde ele alıyor, ardından işlemcinin belkemiği
-					olan “komut” kavramını detaylı olarak açıklıyoruz. Son bölümde ise kondansatörlerin devrelerdeki
-					rolünü ve USB-UART haberleşme mantığını öğreniyoruz.
-
-					Bu ders, hem işlemci mimarisini anlamak hem de donanım tabanlı programlamaya sağlam bir temel atmak
-					isteyenler için tasarlandı.
+				<p>
+					Bu derste, RISC ve CISC mimarilerinin karşılaştırması yapılmakta, ARM mimarisinin neden tercih
+					edildiği açıklanmaktadır. MIPS, VLSI, komut yapıları ve veri yolları detaylandırılmaktadır. Dersin
+					sonunda, kondansatörlerin devre kararlılığına etkisi ile USB-UART haberleşme prensiplerine
+					değinilmektedir.
 				</p>
 				<footer>
 					<ul class="actions">
@@ -243,19 +226,13 @@
 				</header>
 				<a class="image featured"><img src="images/ders3.png" alt="Gömülü Sistemler - ARM Ders 3" /></a>
 				<p>
-					Bu derste gömülü sistem mimarilerinin temellerine kapsamlı bir bakış sunuyoruz. RISC ve CISC
-					mimarilerini kıyaslıyor,
-					ARM’ın neden modern gömülü sistemlerin kalbinde yer aldığını açıklıyoruz. MIPS ve VLSI gibi yapıları
-					detaylandırıyor,
-					ardından komut yapıları, veri yolları, Thumb/ARM modları gibi kritik konuları ele alıyoruz.
+					Üçüncü derste, sistem mimarilerinin temel kavramları sunulmakta; ARM’ın modern sistemlerdeki rolü ve
+					avantajları değerlendirilmektedir. Komut yapıları, Thumb/ARM modları, veri yolları ve MIPS-VLSI gibi
+					kavramlar teknik düzeyde açıklanmaktadır.
 				</p>
 				<p>
-					Dersin devamında kondansatör kullanımının devre kararlılığına etkisinden, USB-UART dönüştürücülerle
-					haberleşmeye,
-					voltaj regülasyonlarından clock tree mimarisine kadar birçok temel ve ileri düzey konuya
-					değiniyoruz. Gerçek zamanlı
-					mikrodenetleyici seçimi, DMA ve engine yapıları gibi performans artırıcı donanımlar da dersin odak
-					noktası.
+					Ayrıca USB-UART haberleşmesi, voltaj regülasyonu ve clock tree yapıları gibi konularla birlikte
+					gerçek zamanlı mikrodenetleyici seçim kriterlerine de yer verilmektedir.
 				</p>
 				<footer>
 					<ul class="actions">
@@ -277,15 +254,9 @@
 				</header>
 				<a class="image featured"><img src="images/ders4.png" alt="Gömülü Sistemler - Bitfield ve CMSIS" /></a>
 				<p>
-					Bu derste gömülü sistemlerde donanım seviyesindeki temel yapı taşlarını öğreniyoruz. Bit seviyesinde
-					veri manipülasyonu için kullanılan bitfield yapılarını, register kavramlarını ve bellek bölgeleriyle
-					farklarını teknik düzeyde inceliyoruz.
-				</p>
-				<p>
-					CMSIS standardı, sabit adres yerine sembolik isim kullanımının neden tercih edildiğini açıklarken;
-					register offset, aligned erişim, FPU birimi, güç modları, DMA ve veri yolları gibi performans odaklı
-					birçok donanım detayına odaklanıyoruz. Gerçek zamanlı sistemler için kritik önemde olan MMIO, ISR
-					davranışları, güç tüketimi stratejileri ve ISA yapıları da dersin öne çıkan konuları arasında.
+					Bu derste, bitfield yapıları üzerinden bit manipülasyonunun donanımsal avantajları, register
+					yapılarının detayları ve CMSIS standardının kullanımı ele alınmaktadır. FPU, güç modları ve MMIO
+					gibi performansla ilişkili konular da kapsam dâhilindedir.
 				</p>
 				<footer>
 					<ul class="actions">
@@ -308,15 +279,14 @@
 				<a class="image featured"><img src="images/ders5.png"
 						alt="Gömülü Sistemler - Donanım Mimari Detayları" /></a>
 				<p>
-					Bu derste mikrodenetleyici sistemlerinde işlemci çekirdeği (CPU), core ve vendor peripheral
-					ayrımları, internal ve external çevre birimleri gibi temel donanım kavramlarını detaylıca ele
-					alıyoruz.
+					Beşinci derste, işlemci çekirdeği (CPU), ARM çekirdeğine ait core peripherals ve üreticiye özel
+					vendor peripherals arasındaki ayrımlar teknik olarak açıklanmakta; internal ve external çevre
+					birimlerinin sistem üzerindeki rolleri değerlendirilmektedir.
 				</p>
 				<p>
-					Ayrıca system memory, flash bellekte alias mekanizması, boot seçenekleri, vector table yapısı ve
-					CMSIS standardı üzerinden yazılım soyutlama mantığını öğreniyoruz. FPU, SP/LR yapıları, Thumb state
-					ayrımı, sabit tablolar (lookup table) ve stack'in başlatılması gibi kritik sistem davranışları da bu
-					dersin kapsamındadır.
+					System memory, alias yapısı, boot seçenekleri ve vector table gibi başlangıç aşamasıyla ilgili
+					bileşenler detaylandırılmakta; FPU, stack pointer, link register ve Thumb mode gibi ileri düzey
+					mimari yapıların uygulamadaki karşılıklarına odaklanılmaktadır.
 				</p>
 				<footer>
 					<ul class="actions">
@@ -325,6 +295,7 @@
 					</ul>
 				</footer>
 			</article>
+
 
 			<!-- Pagination -->
 			<ul class="actions pagination">

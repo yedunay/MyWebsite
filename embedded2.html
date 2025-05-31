@@ -77,6 +77,7 @@
 		<!-- Main -->
 		<div id="main">
 			<!-- Post -->
+			<!-- Description -->
 			<article class="post">
 				<header>
 					<div class="title">
@@ -89,23 +90,20 @@
 				</header>
 				<a class="image featured"><img src="images/ders6.png" alt="" /></a>
 				<p>
-					Gömülü Sistemler Dersi’nin altıncı haftasında, ARM mimarisinde kesmelerin nasıl çalıştığını,
-					kesme vektör tablosunun yapısını ve sistem açılışındaki rolünü inceliyoruz. IVT (Interrupt Vector
-					Table) üzerinden
-					işlemcinin ilk adımlarını anlamaya başlıyor, ardından bu tabloda tanımlı olan her bir kesme ve özel
-					durumun işleyişini açıklıyoruz.
-
-					Ayrıca ARM sistemlerin neden Little Endian kullandığına dair örneklerle farkı açıklıyor, NVIC
-					yapısını klasik PIC sistemlerle karşılaştırıyoruz.
-					inline fonksiyonların derleyici seviyesindeki etkilerini ve bit-banding tekniğinin neden yaygın
-					olmadığını teknik temelli ele alıyoruz.
-					Dersin sonunda ise load-store mimarisi, volatile kullanımı ve CMSIS standardı gibi temel yapı
-					taşlarına dair net kavramlar elde ediyoruz.
-
-					Bu ders, ARM tabanlı bir sistemde kesme kontrolünden bellek erişim ilkelerine kadar yazılımın
-					donanımla en kritik temas noktalarını anlamak için güçlü bir temel sunuyor.
+					Altıncı derste, ARM mimarisinde kesmelerin yapısı ve sistem açılışındaki rolleri teknik olarak
+					analiz edilmektedir. IVT (Interrupt Vector Table) kullanılarak sistemin başlangıç süreci
+					anlaşılmakta ve her bir kesmenin sistem içerisindeki yeri açıklanmaktadır.
 				</p>
-
+				<p>
+					NVIC mimarisi, klasik mikrodenetleyici sistemleriyle karşılaştırmalı olarak incelenmekte; Little
+					Endian veri yerleşimi, inline fonksiyonların derleyici optimizasyonlarına etkisi ve bit-banding’in
+					neden yaygın tercih edilmediği gibi konular teknik düzeyde değerlendirilmektedir.
+				</p>
+				<p>
+					Ders, CMSIS ile yazılımın donanım üzerindeki kontrolünü düzenleme yollarını detaylandırarak,
+					load-store mimarisi ve volatile kullanımı gibi ARM çekirdeğine özgü yapıların pratikteki
+					karşılıklarını sunmaktadır.
+				</p>
 				<footer>
 					<ul class="actions">
 						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_06" class="button large"
@@ -113,6 +111,37 @@
 					</ul>
 				</footer>
 			</article>
+
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>Gömülü Ders 7</a></h2>
+						<p>Bit-Banding, CMSIS ve Donanım Katmanları</p>
+					</div>
+					<div class="meta">
+						<time class="published" datetime="2025-06-09">9 Haziran 2025</time>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/ders7.png" alt="Bit-banding, CMSIS, Hardware Layers" /></a>
+				<p>
+					Yedinci haftada, ARM Cortex-M mimarisine özgü bit-banding tekniği ele alınmakta; atomik bit
+					manipülasyonu gereksinimleri bağlamında kullanım gerekçeleri açıklanmaktadır. Bit-banding'in kesme
+					güvenliği ve kod basitliği üzerindeki etkisi örneklerle sunulmaktadır.
+				</p>
+				<p>
+					CMSIS standardı ile birlikte donanım erişiminin nasıl sadeleştirildiği, yazılım katmanlarının (ASM,
+					CMSIS, LL, HAL, BSP, Application) sistematik olarak nasıl inşa edildiği anlatılmaktadır.
+					Donanım-soyutlama katmanlarının rolü üzerinden taşınabilir ve sürdürülebilir gömülü yazılım
+					mimarilerinin temelleri aktarılmaktadır.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_07" class="button large"
+								target="_blank">Github'a Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
 
 			<!-- Pagination -->
 			<ul class="actions pagination">
