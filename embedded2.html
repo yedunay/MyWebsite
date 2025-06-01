@@ -142,6 +142,86 @@
 				</footer>
 			</article>
 
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>Gömülü Ders 8</a></h2>
+						<p>Tri-State, High-Z, Peripheral Clock, CMSIS ve Startup Süreci</p>
+					</div>
+					<div class="meta">
+						<time class="published" datetime="2025-06-10">1 Haziran 2025</time>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/ders8.png"
+						alt="Gömülü Sistemler - Tri-State ve Başlangıç Akışı" /></a>
+				<p>
+					Sekizinci derste, Tri-State buffer yapısının mantığı, High-Z (yüksek empedans) kavramı ve ARM
+					mikrodenetleyicilerde bu yapıların nasıl uygulandığı ele alınmaktadır. Veri yolunun paylaşımı,
+					open-drain modları ve floating girişlerin donanım seviyesinde nasıl kontrol edildiği örneklerle
+					açıklanmaktadır.
+				</p>
+				<p>
+					Ayrıca çevresel birimlere clock verilme mantığı teknik olarak ele alınmakta; güç tüketimi, sistem
+					kontrolü ve RCC yapılandırmaları ile ilişkisi detaylandırılmaktadır. CMSIS tabanlı konfigürasyon
+					sistematiği, hedef işlemcinin tanımlanması, başlık dosyalarının dahil edilmesi ve build ayarları
+					üzerinden doğru derleme süreci anlatılmaktadır.
+				</p>
+				<p>
+					Son olarak, `Run to main()` debug ayarının etkileri, `Reset_Handler`, `SystemInit`, .data/.bss
+					segmentleri, libc init ve main() çağrısı gibi sistem başlangıç aşamaları teknik düzeyde
+					aktarılmakta, CMSIS-mimarili sistem açılış süreci açıklanmaktadır.
+				</p>
+
+				<article class="post">
+					<header>
+						<div class="title">
+							<h2><a>Gömülü Ders 9</a></h2>
+							<p>Derleme Süreci, PUBWEAK, Load/Store ve PLL Mantığı</p>
+						</div>
+						<div class="meta">
+							<time class="published" datetime="2025-06-11">1 Haziran 2025</time>
+						</div>
+					</header>
+					<a class="image featured"><img src="images/ders9.png" alt="Gömülü Sistemler - Derleme ve PLL" /></a>
+					<p>
+						Sekizinci derste gömülü sistemlerde yazılımın donanım üzerinde çalışabilir hale gelmesini
+						sağlayan temel süreçler teknik düzeyde ele alınmaktadır. Derleyici tarafından oluşturulan `.o`
+						uzantılı nesne dosyalarının, linkleme süreciyle `.hex` veya `.elf` formatlarına dönüştürülmesi;
+						bu işlemlerin neden ayrı adımlarla yapıldığı, object code’un tek başına neden yeterli olmadığı
+						detaylandırılmaktadır.
+					</p>
+					<p>
+						Ayrıca startup assembly dosyalarında kullanılan `PUBWEAK` ifadesi üzerinden zayıf sembol tanımı
+						kavramı açıklanmakta; kullanıcı tanımı yapılmadığında default fonksiyonların çalışması gibi
+						sistematikler anlatılmaktadır. Bu yapıların IRQ handler gibi kritik işlevlerde nasıl
+						kullanıldığı örneklenmiştir.
+					</p>
+					<p>
+						Load/Store mimarisi, ARM işlemcilerinin bellekle yalnızca `LDR` ve `STR` komutlarıyla etkileşim
+						kurmasını sağlayan mimari yapı olarak işlenmektedir. Doğrudan bellekten işlem yapılmamasının
+						sebebi, sistem tasarımı ve performans açısından değerlendirilmiştir.
+					</p>
+					<p>
+						Dersin son bölümünde PLL yapısı detaylı biçimde açıklanmakta; M, N ve P parametrelerinin sistem
+						saatine etkisi üzerinden örneklemelerle gösterilmektedir. SYSCLK’in güvenli aralıkta kalması ve
+						giriş/çıkış frekanslarının neden kritik olduğu teknik düzeyde ele alınmaktadır.
+					</p>
+					<footer>
+						<ul class="actions">
+							<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_09" class="button large"
+									target="_blank">GitHub'a Git</a></li>
+						</ul>
+					</footer>
+				</article>
+
+
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_08" class="button large"
+								target="_blank">Github'a Git</a></li>
+					</ul>
+				</footer>
+			</article>
 
 			<!-- Pagination -->
 			<ul class="actions pagination">
