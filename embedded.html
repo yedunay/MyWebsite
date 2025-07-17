@@ -143,11 +143,11 @@
 					</ul>
 
 					<p>
-						Tüm ders içerikleri, bireysel olarak test edilmiş ve uygulamaya dayalı olarak sunulmuştur.
+						Tüm ders içerikleri uygulamaya dayalı olarak sunulmuştur.
 					</p>
 
 					<p>
-						Takip eden notlar “Ders 1”, “Ders 2” biçiminde sıralı bir sistematikle sunulmaktadır.
+						Takip eden notlar, en güncelden en eskiye doğru sıralanarak düzenli bir şekilde sunulmaktadır.
 					</p>
 
 					<footer>
@@ -163,27 +163,160 @@
 				</footer>
 			</article>
 
-			<!-- Post -->
-			<article class="post">
+						<article class="post">
 				<header>
 					<div class="title">
-						<h2><a>Gömülü Ders 1</a></h2>
-						<p>ARM'a Giriş</p>
+						<h2><a>Yazılım Mimarisi, Donanım Temelleri ve CMSIS</a></h2>
+						<p>Katmanlı Yazılım, Weak Fonksiyonlar, CMOS Davranışları</p>
 					</div>
 					<div class="meta">
-						<time class="published" datetime="2025-04-20">20 Nisan 2025</time>
+						<time class="published" datetime="2025-07-18">18 Temmuz 2025</time>
 					</div>
 				</header>
-				<a class="image featured"><img src="images/ders1.png" alt="" /></a>
+				<a class="image featured"><img src="images/ders11.png"
+						alt="ARM11 Software Layers and Hardware Basics" /></a>
 				<p>
-					İlk derste, mikrodenetleyici ile mikroişlemci arasındaki temel farklar ele alınmakta; ARM
-					mimarisinin tarihsel gelişimi, yaygın kullanım alanları ve sektörel önemi açıklanmaktadır. Harvard
-					ve Von Neumann mimarileri karşılaştırılarak, sistem mimarisi bağlamında temel bir anlayış
-					kazandırılmaktadır.
+					Bu içerikte, ARM tabanlı gömülü sistemlerde kullanılan yazılım mimarisi, katmanlı yapıların
+					avantajları ve donanım-software etkileşiminde dikkat edilmesi gereken temel prensipler
+					açıklanmaktadır.
+				</p>
+				<p>
+					Katmanlı mimarinin donanım değişimine karşı sağladığı taşınabilirlik, okunabilirlik ve test
+					kolaylığı detaylandırılmış; CMSIS, HAL, Upper-Low Driver gibi yazılım bileşenlerinin görevleri net
+					biçimde aktarılmıştır.
+				</p>
+				<p>
+					Weak fonksiyon yapısı, özellikle interrupt handler'lar gibi kullanıcı tarafından override edilebilir
+					işlevlerde nasıl kullanıldığı örneklenmiş; `__WEAK` kavramının amacı ve sistemi nasıl esnek kıldığı
+					açıklanmıştır.
+				</p>
+				<p>
+					Donanım tarafında CMOS mantığı, tristate buffer, High-Z kavramları, TTL ve Schmidt-Trigger lojik
+					yapı farkları üzerinden kararlı sistem tasarımının temelleri aktarılmıştır.
+				</p>
+				<p>
+					Bu ders, hem yazılım hem donanım katmanlarının profesyonel seviyede nasıl bir araya geldiğini
+					anlamak ve ARM mimarisine daha sağlam bakış kazanmak için hazırlanmıştır.
 				</p>
 				<footer>
 					<ul class="actions">
-						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_01" class="button large"
+						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_11" class="button large"
+								target="_blank">GitHub'a Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>Multitasking, FSM ve Haberleşme Temelleri</a></h2>
+						<p>Görev Yönetimi, Cooperative ve Preemptive Yapılar</p>
+					</div>
+					<div class="meta">
+						<time class="published" datetime="2025-07-18">17 Temmuz 2025</time>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/ders10.png" alt="Multitasking, FSM ve IPC" /></a>
+				<p>
+					Bu derste mikrodenetleyici sistemlerinde kullanılan çok görevli yapıların temel prensipleri
+					anlatılmıştır. Cooperative (işbirlikçi) ve Preemptive (öncelikli) multitasking yapılarına dair
+					farklar, kullanım alanları ve avantaj-dezavantajları karşılaştırılmıştır.
+				</p>
+				<p>
+					Finite State Machine (FSM) yapısı, cooperative multitasking içinde görevlerin duruma bağlı yönetimi
+					için açıklanmış; kod örnekleriyle sade bir yapı sunulmuştur. FSM, küçük sistemlerde zaman kontrolü
+					ve görev yönetimini basitleştirir.
+				</p>
+				<p>
+					Prosesler arası haberleşme (IPC) yöntemleri; bayraklar, kuyruklar, semaphore ve mutex yapıları
+					üzerinden özetlenmiş, görevler arası veri paylaşımı ve senkronizasyon ihtiyacı temel seviyede
+					açıklanmıştır.
+				</p>
+				<p>
+					Ders sonunda multitasking türlerinin karşılaştırması, kullanım senaryoları ve küçük sistemlerde
+					nasıl kurulduğu özetlenmiştir. Özellikle cooperative yapı + FSM + zaman fonksiyonlarının düşük
+					kaynak sistemleri için ideal olduğu vurgulanmıştır.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_10" class="button large"
+								target="_blank">GitHub'a Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>Derleme Süreci, PUBWEAK, Load/Store ve PLL Mantığı</a></h2>
+					</div>
+					<div class="meta">
+						<time class="published" datetime="2025-06-11">1 Haziran 2025</time>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/ders9.png" alt="Gömülü Sistemler - Derleme ve PLL" /></a>
+				<p>
+					Dokuzuncu derste gömülü sistemlerde yazılımın donanım üzerinde çalışabilir hale gelmesini
+					sağlayan temel süreçler teknik düzeyde ele alınmaktadır. Derleyici tarafından oluşturulan `.o`
+					uzantılı nesne dosyalarının, linkleme süreciyle `.hex` veya `.elf` formatlarına dönüştürülmesi;
+					bu işlemlerin neden ayrı adımlarla yapıldığı, object code’un tek başına neden yeterli olmadığı
+					detaylandırılmaktadır.
+				</p>
+				<p>
+					Ayrıca startup assembly dosyalarında kullanılan `PUBWEAK` ifadesi üzerinden zayıf sembol tanımı
+					kavramı açıklanmakta; kullanıcı tanımı yapılmadığında default fonksiyonların çalışması gibi
+					sistematikler anlatılmaktadır. Bu yapıların IRQ handler gibi kritik işlevlerde nasıl
+					kullanıldığı örneklenmiştir.
+				</p>
+				<p>
+					Load/Store mimarisi, ARM işlemcilerinin bellekle yalnızca `LDR` ve `STR` komutlarıyla etkileşim
+					kurmasını sağlayan mimari yapı olarak işlenmektedir. Doğrudan bellekten işlem yapılmamasının
+					sebebi, sistem tasarımı ve performans açısından değerlendirilmiştir.
+				</p>
+				<p>
+					Dersin son bölümünde PLL yapısı detaylı biçimde açıklanmakta; M, N ve P parametrelerinin sistem
+					saatine etkisi üzerinden örneklemelerle gösterilmektedir. SYSCLK’in güvenli aralıkta kalması ve
+					giriş/çıkış frekanslarının neden kritik olduğu teknik düzeyde ele alınmaktadır.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_09" class="button large"
+								target="_blank">GitHub'a Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>Tri-State, High-Z, Peripheral Clock, CMSIS ve Startup Süreci</a></h2>
+					</div>
+					<div class="meta">
+						<time class="published" datetime="2025-06-10">1 Haziran 2025</time>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/ders8.png"
+						alt="Gömülü Sistemler - Tri-State ve Başlangıç Akışı" /></a>
+				<p>
+					Sekizinci derste, Tri-State buffer yapısının mantığı, High-Z (yüksek empedans) kavramı ve ARM
+					mikrodenetleyicilerde bu yapıların nasıl uygulandığı ele alınmaktadır. Veri yolunun paylaşımı,
+					open-drain modları ve floating girişlerin donanım seviyesinde nasıl kontrol edildiği örneklerle
+					açıklanmaktadır.
+				</p>
+				<p>
+					Ayrıca çevresel birimlere clock verilme mantığı teknik olarak ele alınmakta; güç tüketimi, sistem
+					kontrolü ve RCC yapılandırmaları ile ilişkisi detaylandırılmaktadır. CMSIS tabanlı konfigürasyon
+					sistematiği, hedef işlemcinin tanımlanması, başlık dosyalarının dahil edilmesi ve build ayarları
+					üzerinden doğru derleme süreci anlatılmaktadır.
+				</p>
+				<p>
+					Son olarak, `Run to main()` debug ayarının etkileri, `Reset_Handler`, `SystemInit`, .data/.bss
+					segmentleri, libc init ve main() çağrısı gibi sistem başlangıç aşamaları teknik düzeyde
+					aktarılmakta, CMSIS-mimarili sistem açılış süreci açıklanmaktadır.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_08" class="button large"
 								target="_blank">Github'a Git</a></li>
 					</ul>
 				</footer>
@@ -192,110 +325,31 @@
 			<article class="post">
 				<header>
 					<div class="title">
-						<h2><a>Gömülü Ders 2</a></h2>
-						<p>Mimariler, Komutlar ve Donanım Temelleri</p>
+						<h2><a>Bit-Banding, CMSIS ve Donanım Katmanları</a></h2>
 					</div>
 					<div class="meta">
-						<time class="published" datetime="2025-04-20">20 Nisan 2025</time>
+						<time class="published" datetime="2025-06-09">31 Mayıs 2025</time>
 					</div>
 				</header>
-				<a class="image featured"><img src="images/ders2.png" alt="" /></a>
+				<a class="image featured"><img src="images/ders7.png" alt="Bit-banding, CMSIS, Hardware Layers" /></a>
 				<p>
-					Bu derste, RISC ve CISC mimarilerinin karşılaştırması yapılmakta, ARM mimarisinin neden tercih
-					edildiği açıklanmaktadır. MIPS, VLSI, komut yapıları ve veri yolları detaylandırılmaktadır. Dersin
-					sonunda, kondansatörlerin devre kararlılığına etkisi ile USB-UART haberleşme prensiplerine
-					değinilmektedir.
+					Yedinci haftada, ARM Cortex-M mimarisine özgü bit-banding tekniği ele alınmakta; atomik bit
+					manipülasyonu gereksinimleri bağlamında kullanım gerekçeleri açıklanmaktadır. Bit-banding'in kesme
+					güvenliği ve kod basitliği üzerindeki etkisi örneklerle sunulmaktadır.
+				</p>
+				<p>
+					CMSIS standardı ile birlikte donanım erişiminin nasıl sadeleştirildiği, yazılım katmanlarının (ASM,
+					CMSIS, LL, HAL, BSP, Application) sistematik olarak nasıl inşa edildiği anlatılmaktadır.
+					Donanım-soyutlama katmanlarının rolü üzerinden taşınabilir ve sürdürülebilir gömülü yazılım
+					mimarilerinin temelleri aktarılmaktadır.
 				</p>
 				<footer>
 					<ul class="actions">
-						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_02" class="button large"
+						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_07" class="button large"
 								target="_blank">Github'a Git</a></li>
 					</ul>
 				</footer>
 			</article>
-
-			<article class="post">
-				<header>
-					<div class="title">
-						<h2><a>Gömülü Ders 3</a></h2>
-						<p>ARM Mimarisi, Komutlar, Donanım ve Gerçek Zamanlı Sistemler</p>
-					</div>
-					<div class="meta">
-						<time class="published" datetime="2025-04-21">21 Nisan 2025</time>
-					</div>
-				</header>
-				<a class="image featured"><img src="images/ders3.png" alt="Gömülü Sistemler - ARM Ders 3" /></a>
-				<p>
-					Üçüncü derste, sistem mimarilerinin temel kavramları sunulmakta; ARM’ın modern sistemlerdeki rolü ve
-					avantajları değerlendirilmektedir. Komut yapıları, Thumb/ARM modları, veri yolları ve MIPS-VLSI gibi
-					kavramlar teknik düzeyde açıklanmaktadır.
-				</p>
-				<p>
-					Ayrıca USB-UART haberleşmesi, voltaj regülasyonu ve clock tree yapıları gibi konularla birlikte
-					gerçek zamanlı mikrodenetleyici seçim kriterlerine de yer verilmektedir.
-				</p>
-				<footer>
-					<ul class="actions">
-						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_03" class="button large"
-								target="_blank">Github'a Git</a></li>
-					</ul>
-				</footer>
-			</article>
-
-			<article class="post">
-				<header>
-					<div class="title">
-						<h2><a>Gömülü Ders 4</a></h2>
-						<p>Bitfield, Register Mimarisi, CMSIS ve Güçlü Gömülü Donanım Kavramları</p>
-					</div>
-					<div class="meta">
-						<time class="published" datetime="2025-04-23">23 Nisan 2025</time>
-					</div>
-				</header>
-				<a class="image featured"><img src="images/ders4.png" alt="Gömülü Sistemler - Bitfield ve CMSIS" /></a>
-				<p>
-					Bu derste, bitfield yapıları üzerinden bit manipülasyonunun donanımsal avantajları, register
-					yapılarının detayları ve CMSIS standardının kullanımı ele alınmaktadır. FPU, güç modları ve MMIO
-					gibi performansla ilişkili konular da kapsam dâhilindedir.
-				</p>
-				<footer>
-					<ul class="actions">
-						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_04" class="button large"
-								target="_blank">Github'a Git</a></li>
-					</ul>
-				</footer>
-			</article>
-
-			<article class="post">
-				<header>
-					<div class="title">
-						<h2><a>Gömülü Ders 5</a></h2>
-						<p>Processor, Peripheral Yapıları, CMSIS, Boot Bellekler ve Reset Vektörü</p>
-					</div>
-					<div class="meta">
-						<time class="published" datetime="2025-04-24">24 Nisan 2025</time>
-					</div>
-				</header>
-				<a class="image featured"><img src="images/ders5.png"
-						alt="Gömülü Sistemler - Donanım Mimari Detayları" /></a>
-				<p>
-					Beşinci derste, işlemci çekirdeği (CPU), ARM çekirdeğine ait core peripherals ve üreticiye özel
-					vendor peripherals arasındaki ayrımlar teknik olarak açıklanmakta; internal ve external çevre
-					birimlerinin sistem üzerindeki rolleri değerlendirilmektedir.
-				</p>
-				<p>
-					System memory, alias yapısı, boot seçenekleri ve vector table gibi başlangıç aşamasıyla ilgili
-					bileşenler detaylandırılmakta; FPU, stack pointer, link register ve Thumb mode gibi ileri düzey
-					mimari yapıların uygulamadaki karşılıklarına odaklanılmaktadır.
-				</p>
-				<footer>
-					<ul class="actions">
-						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_05" class="button large"
-								target="_blank">Github'a Git</a></li>
-					</ul>
-				</footer>
-			</article>
-
 
 			<!-- Pagination -->
 			<ul class="actions pagination">
