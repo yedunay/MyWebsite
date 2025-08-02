@@ -163,7 +163,52 @@
 				</footer>
 			</article>
 
-						<article class="post">
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>BASE: Soyutlanmış Donanım Katmanı ve State Machine Giriş</a></h2>
+						<p>Taşınabilir C Yapısı, SysTick Tabanlı clock(), GPIO Soyutlama, LED Durum Makinesi</p>
+					</div>
+					<div class="meta">
+						<time class="published" datetime="2025-08-02">2 Ağustos 2025</time>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/ders12.png"
+						alt="ARM BASE Structure and Abstract GPIO Layer" /></a>
+				<p>
+					Bu derste, donanıma bağlı kalmadan çalışan taşınabilir bir ARM BASE yapısı oluşturulmuştur.
+					Kod yapısı modüler olarak ayrılmış ve system, io ve main dosyaları üzerinden organize edilmiştir.
+				</p>
+				<p>
+					SysTick zamanlayıcısı kullanılarak clock() fonksiyonu soyutlanmıştır.
+					Süre kontrolü donanımdan bağımsız şekilde sağlanmış ve yapı, FreeRTOS gibi sistemlerle uyumlu hale
+					getirilmiştir.
+				</p>
+				<p>
+					LED blink uygulaması üzerinden init ve stable fazlarına sahip basit bir durum makinesi örneği
+					sunulmuştur.
+					Her bir geçiş, zaman tabanlı mantıkla yönetilmiştir.
+				</p>
+				<p>
+					GPIO işlemleri, IO_Init, IO_Read ve IO_Write fonksiyonlarıyla soyutlanmıştır.
+					Tüm pin yapısı s_ios[] dizisi ile kontrol altına alınmış ve yapı farklı platformlara taşınabilir
+					hale getirilmiştir.
+				</p>
+				<p>
+					Bu ders, yazılım ve donanım katmanlarının profesyonel seviyede nasıl bir araya getirildiğini
+					göstermek
+					ve ARM mimarisine daha sağlam bir bakış kazandırmak amacıyla hazırlanmıştır.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/ARM/tree/main/01_BASE_ABSTRACT" class="button large"
+								target="_blank">GitHub'a Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
+
+			<article class="post">
 				<header>
 					<div class="title">
 						<h2><a>Yazılım Mimarisi, Donanım Temelleri ve CMSIS</a></h2>
@@ -200,8 +245,8 @@
 				</p>
 				<footer>
 					<ul class="actions">
-						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_11" class="button large"
-								target="_blank">GitHub'a Git</a></li>
+						<li><a href="https://github.com/yedunay/ARM/tree/main/00_GİRİŞ_DERS_NOTLARI/ARM_11"
+								class="button large" target="_blank">GitHub'a Git</a></li>
 					</ul>
 				</footer>
 			</article>
@@ -239,8 +284,8 @@
 				</p>
 				<footer>
 					<ul class="actions">
-						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_10" class="button large"
-								target="_blank">GitHub'a Git</a></li>
+						<li><a href="https://github.com/yedunay/ARM/tree/main/00_GİRİŞ_DERS_NOTLARI/ARM_10"
+								class="button large" target="_blank">GitHub'a Git</a></li>
 					</ul>
 				</footer>
 			</article>
@@ -280,8 +325,8 @@
 				</p>
 				<footer>
 					<ul class="actions">
-						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_09" class="button large"
-								target="_blank">GitHub'a Git</a></li>
+						<li><a href="https://github.com/yedunay/ARM/tree/main/00_GİRİŞ_DERS_NOTLARI/ARM_09"
+								class="button large" target="_blank">GitHub'a Git</a></li>
 					</ul>
 				</footer>
 			</article>
@@ -316,8 +361,8 @@
 				</p>
 				<footer>
 					<ul class="actions">
-						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_08" class="button large"
-								target="_blank">Github'a Git</a></li>
+						<li><a href="https://github.com/yedunay/ARM/tree/main/00_GİRİŞ_DERS_NOTLARI/ARM_08"
+								class="button large" target="_blank">Github'a Git</a></li>
 					</ul>
 				</footer>
 			</article>
@@ -345,8 +390,8 @@
 				</p>
 				<footer>
 					<ul class="actions">
-						<li><a href="https://github.com/yedunay/ARM/tree/main/ARM_07" class="button large"
-								target="_blank">Github'a Git</a></li>
+						<li><a href="https://github.com/yedunay/ARM/tree/main/00_GİRİŞ_DERS_NOTLARI/ARM_07"
+								class="button large" target="_blank">Github'a Git</a></li>
 					</ul>
 				</footer>
 			</article>
