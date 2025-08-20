@@ -207,6 +207,84 @@
 				</footer>
 			</article>
 
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>LCD Sürücü Sistemi</a></h2>
+						<p>HD44780 Uyumlu Ekran Kontrolü, Printf Redirection, 4-bit Paralel İletişim</p>
+					</div>
+					<div class="meta">
+						<time class="published" datetime="2025-08-02">2 Ağustos 2025</time>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/lcd.png"
+						alt="STM32F411 LCD Driver System" /></a>
+				<p>
+					Bu projede STM32F411 platformu için optimize edilmiş karakter LCD sürücü kütüphanesi 
+					geliştirilmiştir. HD44780/ST7066U uyumlu kontrol çipleri ile 4-bit paralel haberleşme 
+					protokolü kullanılarak verimli kaynak kullanımı sağlanmıştır.
+				</p>
+				<p>
+					IAR Embedded Workbench'in __write weak fonksiyonu override edilerek printf() fonksiyonları 
+					doğrudan LCD'ye yönlendirilmiştir. Bu sayede UART/Serial port konfigürasyonuna gerek kalmadan 
+					debug çıktıları görsel olarak LCD üzerinde takip edilebilmektedir.
+				</p>
+				<p>
+					Gelişmiş format kontrol motoru ile terminal emülasyonu sağlanmış; escape sequence işleme, 
+					satır başı kontrolü ve ekran temizleme komutları implementasyona dahil edilmiştir. 
+					Non-blocking state machine tabanlı LED kontrolü ile real-time performans gösterilmiştir.
+				</p>
+				<p>
+					Donanım abstraksiyon katmanı sayesinde port/pin mapping table ile platform bağımsızlığı 
+					kazanılmış; SysTick entegrasyonu ile ARM Cortex-M4 zamanlayıcısından 1ms hassasiyetinde 
+					timing logic sağlanmıştır.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/ARM/tree/main/02_LCD" class="button large"
+								target="_blank">GitHub'a Git</a></li>
+					</ul>
+				</footer>
+			</article>
+
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>UART İletişim Protokolü</a></h2>
+						<p>Profesyonel UART Protokolü, Multi-Port Desteği, Real-time Veri İletişimi</p>
+					</div>
+					<div class="meta">
+						<time class="published" datetime="2025-08-02">2 Ağustos 2025</time>
+					</div>
+				</header>
+				<a class="image featured"><img src="images/uart.png"
+						alt="STM32F411 UART Communication System" /></a>
+				<p>
+					Bu projede STM32F411 mikrodenetleyicisi üzerinde profesyonel seviyede UART iletişim sistemi 
+					geliştirilmiştir. Çoklu UART port desteği ile full-duplex asenkron veri iletişimi sağlanmaktadır.
+				</p>
+				<p>
+					Donanım seviyesinde UART1, UART2, UART3 ve UART4 portları desteklenmekte; yapılandırılabilir 
+					baud rate seçenekleri ile esnek iletişim altyapısı sunulmaktadır. 8N1 veri formatı ve 
+					comprehensive hata kontrolü ile güvenilir veri transferi gerçekleştirilmektedir.
+				</p>
+				<p>
+					Polling tabanlı non-blocking operasyonlar ile gerçek zamanlı veri kontrolü yapılmakta; 
+					overrun, framing ve noise error detection sistemleri entegre edilmiştir. Terminal emülasyonu 
+					için karakter bazlı send/receive API'ları geliştirilmiştir.
+				</p>
+				<p>
+					Modüler tasarım sayesinde kolay entegrasyon sağlanmış ve multi-tasking yapılar ile 
+					uyumlu çalışacak şekilde optimize edilmiştir. GPIO abstraksiyon katmanı üzerinden 
+					pin konfigürasyonları yönetilmektedir.
+				</p>
+				<footer>
+					<ul class="actions">
+						<li><a href="https://github.com/yedunay/ARM/tree/main/03_UART" class="button large"
+								target="_blank">GitHub'a Git</a></li>
+					</ul>
+				</footer>
+			</article>
 
 			<article class="post">
 				<header>
