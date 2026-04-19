@@ -1,0 +1,218 @@
+[
+  {
+    "id": "embedded-intro",
+    "title": "Gömülü Sistem Notları",
+    "subtitle": "ARM Cortex-M mimarisi üzerine yapılandırılmış ders serisi",
+    "category": "Gömülü",
+    "image": "images/mainembed.png",
+    "url": "embedded.html"
+  },
+  {
+    "id": "ders12-base",
+    "title": "BASE: Soyutlanmış Donanım Katmanı ve State Machine",
+    "subtitle": "Taşınabilir C Yapısı, SysTick Tabanlı clock(), GPIO Soyutlama, LED Durum Makinesi",
+    "category": "Gömülü",
+    "image": "images/ders12.png",
+    "url": "embedded.html"
+  },
+  {
+    "id": "ders-lcd",
+    "title": "LCD Sürücü Sistemi",
+    "subtitle": "HD44780 Uyumlu Ekran Kontrolü, Printf Redirection, 4-bit Paralel İletişim",
+    "category": "Gömülü",
+    "image": "images/lcd.jpg",
+    "url": "embedded.html"
+  },
+  {
+    "id": "ders-uart",
+    "title": "UART İletişim Protokolü",
+    "subtitle": "Profesyonel UART Protokolü, Multi-Port Desteği, Real-time Veri İletişimi",
+    "category": "Gömülü",
+    "image": "images/uart.png",
+    "url": "embedded.html"
+  },
+  {
+    "id": "ders11-cmsis",
+    "title": "Yazılım Mimarisi, Donanım Temelleri ve CMSIS",
+    "subtitle": "Katmanlı Yazılım, Weak Fonksiyonlar, CMOS Davranışları",
+    "category": "Gömülü",
+    "image": "images/ders11.png",
+    "url": "embedded.html"
+  },
+  {
+    "id": "ders10-fsm",
+    "title": "Multitasking, FSM ve Haberleşme Temelleri",
+    "subtitle": "Görev Yönetimi, Cooperative ve Preemptive Yapılar",
+    "category": "Gömülü",
+    "image": "images/ders10.png",
+    "url": "embedded.html"
+  },
+  {
+    "id": "ders9-pll",
+    "title": "Derleme Süreci, PUBWEAK, Load/Store ve PLL Mantığı",
+    "subtitle": "Nesne dosyaları, linkleme, zayıf semboller ve saat yönetimi",
+    "category": "Gömülü",
+    "image": "images/ders9.png",
+    "url": "embedded.html"
+  },
+  {
+    "id": "ders8-tristate",
+    "title": "Tri-State, High-Z, Peripheral Clock, CMSIS ve Startup Süreci",
+    "subtitle": "Tri-State buffer, CMSIS konfigürasyonu, sistem başlangıç akışı",
+    "category": "Gömülü",
+    "image": "images/ders8.png",
+    "url": "embedded.html"
+  },
+  {
+    "id": "ders7-bitband",
+    "title": "Bit-Banding, CMSIS ve Donanım Katmanları",
+    "subtitle": "Atomik bit manipülasyonu, donanım soyutlama katmanları",
+    "category": "Gömülü",
+    "image": "images/ders7.png",
+    "url": "embedded.html"
+  },
+  {
+    "id": "42-intro",
+    "title": "42 Okulu ve Benim Yolculuğum",
+    "subtitle": "Türkiye'deki özgür öğrenme modeli ve kişisel deneyimim",
+    "category": "42",
+    "image": "images/my42.png",
+    "url": "forty_two.html"
+  },
+  {
+    "id": "42-piscine",
+    "title": "42Piscine",
+    "subtitle": "Yoğun öğrenme ve temel yazılım yetkinlikleri süreci",
+    "category": "42",
+    "image": "images/42piscine.png",
+    "url": "forty_two.html"
+  },
+  {
+    "id": "42-bsq",
+    "title": "BSQ42",
+    "subtitle": "En büyük kareyi bulma algoritması (Dynamic Programming)",
+    "category": "42",
+    "image": "images/bsq.png",
+    "url": "forty_two.html"
+  },
+  {
+    "id": "42-libft",
+    "title": "libft",
+    "subtitle": "Temel C kütüphanesini sıfırdan yazmak",
+    "category": "42",
+    "image": "images/libft.png",
+    "url": "forty_two.html"
+  },
+  {
+    "id": "42-printf",
+    "title": "ft_printf",
+    "subtitle": "C dilinde printf fonksiyonunun yeniden geliştirilmesi",
+    "category": "42",
+    "image": "images/printf.png",
+    "url": "forty_two.html"
+  },
+  {
+    "id": "42-gnl",
+    "title": "get_next_line",
+    "subtitle": "Dosyalardan satır satır okuma fonksiyonu geliştirme",
+    "category": "42",
+    "image": "images/gnl.png",
+    "url": "forty_two.html"
+  },
+  {
+    "id": "42-minitalk",
+    "title": "Minitalk",
+    "subtitle": "Unix sinyalleri ile süreçler arası veri iletişimi",
+    "category": "42",
+    "image": "images/minitalk.png",
+    "url": "forty_twopage2.html"
+  },
+  {
+    "id": "42-pushswap",
+    "title": "Push Swap",
+    "subtitle": "Sıralama algoritmaları ve yığın veri yapıları",
+    "category": "42",
+    "image": "images/pushswap.png",
+    "url": "forty_twopage2.html"
+  },
+  {
+    "id": "42-solong",
+    "title": "So Long",
+    "subtitle": "2D oyun geliştirme ve grafik kütüphanesi",
+    "category": "42",
+    "image": "images/solong.png",
+    "url": "forty_twopage2.html"
+  },
+  {
+    "id": "42-philo",
+    "title": "Philosophers",
+    "subtitle": "Thread senkronizasyonu ve mutex yönetimi",
+    "category": "42",
+    "image": "images/philo.png",
+    "url": "forty_twopage2.html"
+  },
+  {
+    "id": "42-shell",
+    "title": "Minishell",
+    "subtitle": "Unix shell implementasyonu, süreç yönetimi, pipe ve yönlendirme",
+    "category": "42",
+    "image": "images/shell.png",
+    "url": "forty_twopage3.html"
+  },
+  {
+    "id": "42-netp",
+    "title": "NetPractice",
+    "subtitle": "Ağ yapılandırması, IP subnetting ve routing",
+    "category": "42",
+    "image": "images/netp.png",
+    "url": "forty_twopage3.html"
+  },
+  {
+    "id": "42-cpp04",
+    "title": "CPP Modules",
+    "subtitle": "C++ OOP, kalıtım, polimorfizm ve STL",
+    "category": "42",
+    "image": "images/CPP04.png",
+    "url": "forty_twopage3.html"
+  },
+  {
+    "id": "42-cub3d",
+    "title": "Cub3D",
+    "subtitle": "Raycasting motoru ile 3D görselleştirme",
+    "category": "42",
+    "image": "images/cub3d.png",
+    "url": "forty_twopage3.html"
+  },
+  {
+    "id": "42-irc",
+    "title": "ft_irc",
+    "subtitle": "IRC sunucusu, soket programlama ve çoklu istemci desteği",
+    "category": "42",
+    "image": "images/irc.png",
+    "url": "forty_twopage3.html"
+  },
+  {
+    "id": "mcu-tiva",
+    "title": "Tiva C Weekly Learning",
+    "subtitle": "Mikroişlemcilere derinlemesine ve uygulamalı giriş",
+    "category": "MCU",
+    "image": "images/tiva.png",
+    "url": "mcu.html"
+  },
+  {
+    "id": "mind-portfolio",
+    "title": "Zihinsel Yatırım",
+    "subtitle": "Portföy hazırlama serüvenim ve yapay zeka ile üretkenlik",
+    "category": "Zihinsel Yatırım",
+    "image": "images/mind.png",
+    "url": "mind.html"
+  },
+  {
+    "id": "about",
+    "title": "Hakkımda",
+    "subtitle": "Yunus Emre DUNAY — Gömülü Sistem Mühendisi",
+    "category": "Profil",
+    "image": "images/about.jpeg",
+    "url": "about.html"
+  }
+]
