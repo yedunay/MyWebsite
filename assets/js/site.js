@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   YED Site — Global Search + Scroll Animations
+   YED Site — Global Search + Scroll Animations v2
    ═══════════════════════════════════════════════════════════ */
 
 (function () {
@@ -8,65 +8,68 @@
     // ─── SCROLL ANIMATIONS (IntersectionObserver) ────────────
     function initScrollAnimations() {
         var posts = document.querySelectorAll('article.post');
-        if (!posts.length) return;
+        var sidebar = document.getElementById('sidebar');
 
-        // If reduced motion is preferred, show everything immediately
+        // If reduced motion, show everything
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            posts.forEach(function (p) {
-                p.style.opacity = '1';
-                p.style.transform = 'none';
-            });
+            posts.forEach(function (p) { p.style.opacity = '1'; p.style.transform = 'none'; });
+            if (sidebar) { sidebar.style.opacity = '1'; sidebar.style.transform = 'none'; }
             return;
         }
 
-        var observer = new IntersectionObserver(function (entries) {
+        var postObserver = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
+                    postObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
 
-        posts.forEach(function (post) {
-            observer.observe(post);
-        });
+        posts.forEach(function (post) { postObserver.observe(post); });
+
+        // Sidebar/footer entrance
+        if (sidebar) {
+            var footerObs = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting) {
+                    sidebar.classList.add('is-visible');
+                    footerObs.unobserve(sidebar);
+                }
+            }, { threshold: 0.1 });
+            footerObs.observe(sidebar);
+        }
     }
 
     // ─── SEARCH SYSTEM ───────────────────────────────────────
     var searchIndex = null;
-    var searchOverlay = null;
-    var searchModal = null;
-    var searchInput = null;
-    var searchResults = null;
+    var searchOverlay, searchModal, searchInput, searchResults;
 
     function createSearchUI() {
-        // Search button in header
         var header = document.getElementById('header');
         if (!header) return;
 
+        // Add search to nav.main (mobile hamburger area)
         var navMain = header.querySelector('nav.main ul');
         if (navMain) {
             var searchLi = document.createElement('li');
             searchLi.className = 'search-trigger';
-            searchLi.innerHTML = '<a href="#" id="openSearch" style="border-bottom:none;" title="Ara (Ctrl+K)"><i class="fas fa-search" style="font-size:16px;"></i></a>';
+            searchLi.innerHTML = '<a href="#" id="openSearch" style="border-bottom:none;" title="Ara (Ctrl+K)"><i class="fas fa-search" style="font-size:15px;"></i></a>';
             navMain.insertBefore(searchLi, navMain.firstChild);
         }
 
-        // Also add to nav.links area for desktop
+        // Add search to desktop nav
         var navLinks = header.querySelector('nav.links ul');
         if (navLinks) {
-            var searchDesktopLi = document.createElement('li');
-            searchDesktopLi.innerHTML = '<a href="#" id="openSearchDesktop" style="border-bottom:none;opacity:0.6;font-size:0.85em;" title="Ara (Ctrl+K)"><i class="fas fa-search"></i> Ara</a>';
-            navLinks.appendChild(searchDesktopLi);
+            var s = document.createElement('li');
+            s.innerHTML = '<a href="#" id="openSearchDesktop" style="border-bottom:none;opacity:0.55;font-size:0.85em;" title="Ara (Ctrl+K)"><i class="fas fa-search"></i> Ara</a>';
+            navLinks.appendChild(s);
         }
 
-        // Overlay
+        // Overlay + Modal
         searchOverlay = document.createElement('div');
         searchOverlay.className = 'search-overlay';
         document.body.appendChild(searchOverlay);
 
-        // Modal
         searchModal = document.createElement('div');
         searchModal.className = 'search-modal';
         searchModal.innerHTML =
@@ -83,13 +86,9 @@
         searchInput = document.getElementById('searchInput');
         searchResults = document.getElementById('searchResults');
 
-        // Event listeners
-        var openBtns = document.querySelectorAll('#openSearch, #openSearchDesktop');
-        openBtns.forEach(function (btn) {
-            btn.addEventListener('click', function (e) {
-                e.preventDefault();
-                openSearch();
-            });
+        // Listeners
+        document.querySelectorAll('#openSearch, #openSearchDesktop').forEach(function (btn) {
+            btn.addEventListener('click', function (e) { e.preventDefault(); openSearch(); });
         });
 
         searchOverlay.addEventListener('click', closeSearch);
@@ -97,23 +96,16 @@
         searchInput.addEventListener('input', function () {
             var q = searchInput.value.trim();
             if (q.length < 2) {
-                searchResults.innerHTML = '<div class="search-hint">Aramaya başlamak için en az 2 karakter girin...</div>';
+                searchResults.innerHTML = '<div class="search-hint">En az 2 karakter girin...</div>';
                 return;
             }
             performSearch(q);
         });
 
-        // Keyboard shortcuts
+        // Keyboard
         document.addEventListener('keydown', function (e) {
-            // Ctrl+K or Cmd+K
-            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-                e.preventDefault();
-                openSearch();
-            }
-            // Escape
-            if (e.key === 'Escape') {
-                closeSearch();
-            }
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); openSearch(); }
+            if (e.key === 'Escape') closeSearch();
         });
     }
 
@@ -122,7 +114,7 @@
         searchModal.classList.add('active');
         searchInput.value = '';
         searchResults.innerHTML = '<div class="search-hint">Aramaya başlamak için yazın...</div>';
-        setTimeout(function () { searchInput.focus(); }, 100);
+        setTimeout(function () { searchInput.focus(); }, 120);
         document.body.style.overflow = 'hidden';
         loadSearchIndex();
     }
@@ -135,24 +127,23 @@
 
     function loadSearchIndex() {
         if (searchIndex) return;
+        // Try root path first, then relative
         fetch('search-index.json')
-            .then(function (r) { return r.json(); })
-            .then(function (data) { searchIndex = data; })
+            .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+            .then(function (d) { searchIndex = d; })
             .catch(function () {
-                // Try relative path variations
                 fetch('./search-index.json')
                     .then(function (r) { return r.json(); })
-                    .then(function (data) { searchIndex = data; })
-                    .catch(function () { console.warn('Search index not found'); });
+                    .then(function (d) { searchIndex = d; })
+                    .catch(function () { });
             });
     }
 
     function performSearch(query) {
         if (!searchIndex) {
-            searchResults.innerHTML = '<div class="search-no-results">Arama indeksi yükleniyor...</div>';
+            searchResults.innerHTML = '<div class="search-no-results">Yükleniyor...</div>';
             return;
         }
-
         var q = query.toLowerCase();
         var results = searchIndex.filter(function (item) {
             return item.title.toLowerCase().indexOf(q) !== -1 ||
@@ -160,8 +151,8 @@
                 item.category.toLowerCase().indexOf(q) !== -1;
         });
 
-        if (results.length === 0) {
-            searchResults.innerHTML = '<div class="search-no-results">Sonuç bulunamadı: "' + escapeHtml(query) + '"</div>';
+        if (!results.length) {
+            searchResults.innerHTML = '<div class="search-no-results">"' + esc(query) + '" için sonuç bulunamadı</div>';
             return;
         }
 
@@ -170,39 +161,39 @@
             html += '<a class="search-result-item" href="' + item.url + '">' +
                 '<img src="' + item.image + '" alt="" loading="lazy" onerror="this.style.display=\'none\'" />' +
                 '<div class="search-result-info">' +
-                '  <div class="search-result-title">' + highlightMatch(item.title, query) + '</div>' +
-                '  <div class="search-result-subtitle">' + highlightMatch(item.subtitle, query) + '</div>' +
+                '  <div class="search-result-title">' + hi(item.title, query) + '</div>' +
+                '  <div class="search-result-subtitle">' + hi(item.subtitle, query) + '</div>' +
                 '</div>' +
                 '<span class="search-result-badge">' + item.category + '</span>' +
                 '</a>';
         });
-
         searchResults.innerHTML = html;
     }
 
-    function highlightMatch(text, query) {
-        var idx = text.toLowerCase().indexOf(query.toLowerCase());
-        if (idx === -1) return escapeHtml(text);
-        return escapeHtml(text.substring(0, idx)) +
-            '<strong style="color:var(--accent)">' + escapeHtml(text.substring(idx, idx + query.length)) + '</strong>' +
-            escapeHtml(text.substring(idx + query.length));
+    function hi(text, q) {
+        var i = text.toLowerCase().indexOf(q.toLowerCase());
+        if (i === -1) return esc(text);
+        return esc(text.substring(0, i)) + '<strong style="color:var(--accent)">' + esc(text.substring(i, i + q.length)) + '</strong>' + esc(text.substring(i + q.length));
     }
 
-    function escapeHtml(str) {
-        var div = document.createElement('div');
-        div.textContent = str;
-        return div.innerHTML;
-    }
+    function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
-    // ─── HEADER SCROLL SHADOW ────────────────────────────────
-    function initHeaderShadow() {
-        var header = document.getElementById('header');
-        if (!header) return;
+    // ─── HEADER SCROLL EFFECT ────────────────────────────────
+    function initHeaderScroll() {
+        var h = document.getElementById('header');
+        if (!h) return;
+        var ticking = false;
         window.addEventListener('scroll', function () {
-            if (window.scrollY > 10) {
-                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
-            } else {
-                header.style.boxShadow = '0 1px 8px rgba(0,0,0,0.04)';
+            if (!ticking) {
+                requestAnimationFrame(function () {
+                    if (window.scrollY > 20) {
+                        h.classList.add('scrolled');
+                    } else {
+                        h.classList.remove('scrolled');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
             }
         }, { passive: true });
     }
@@ -216,7 +207,7 @@
     function init() {
         initScrollAnimations();
         createSearchUI();
-        initHeaderShadow();
+        initHeaderScroll();
         initSmoothScroll();
     }
 
